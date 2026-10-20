@@ -4,314 +4,493 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#f47721">
+<meta name="description" content="Anjana Pushpakaran's personal portfolio">
 <title>Anjana Pushpakaran | Portfolio</title>
 
 <style>
 :root {
-    --orange: #f47721;
-    --orange-dark: #d95d0b;
-    --light-orange: #fff2e8;
-    --white: #ffffff;
-    --dark: #242424;
-    --gray: #666666;
+  --orange: #f47721;
+  --orange-dark: #d95d0b;
+  --light: #fff2e8;
+  --white: #ffffff;
+  --dark: #282421;
+  --gray: #6c6865;
+  --border: #f2dfd0;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    background: var(--white);
-    color: var(--dark);
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
+  font-family: Arial, sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  line-height: 1.7;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(255,255,255,0.96);
-    padding: 18px 7%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-    border-bottom: 1px solid #f1e4da;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 16px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 15px #00000008;
 }
 
 .logo {
-    color: var(--dark);
-    font-size: 25px;
-    font-weight: 800;
+  color: var(--dark);
+  font-size: 26px;
+  font-weight: 800;
 }
 
 .logo span {
-    color: var(--orange);
+  color: var(--orange);
 }
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 nav a {
-    color: var(--dark);
-    padding: 8px 14px;
-    border-radius: 25px;
-    transition: 0.25s;
+  color: var(--dark);
+  background: #fff8f2;
+  padding: 8px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: .25s;
 }
 
 nav a:hover {
-    color: white;
-    background: var(--orange);
+  background: var(--orange);
+  color: white;
+}
+
+.hero-wrap {
+  padding: 35px 5%;
+  background: linear-gradient(#fff7f0, #ffffff);
 }
 
 .hero {
-    min-height: 82vh;
-    padding: 85px 8%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background: linear-gradient(135deg, #fffaf6, #fff0e3);
+  max-width: 1200px;
+  margin: auto;
+  min-height: 570px;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  align-items: center;
+  gap: 35px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #fff0e3, #fffaf6);
+  box-shadow: 0 15px 40px #8c4a1a12;
 }
 
-.eyebrow {
-    color: var(--orange-dark);
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-size: 15px;
+.eyebrow, .section-label {
+  color: var(--orange-dark);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .hero h1 {
-    font-size: clamp(38px, 7vw, 70px);
-    line-height: 1.15;
-    margin: 15px 0;
+  font-size: clamp(38px, 5.5vw, 66px);
+  line-height: 1.12;
+  margin: 18px 0;
 }
 
 .highlight {
-    color: var(--orange);
+  color: var(--orange);
 }
 
 .hero h2 {
-    font-size: clamp(20px, 3vw, 29px);
-    margin-bottom: 18px;
+  font-size: clamp(19px, 2.5vw, 26px);
+  margin-bottom: 15px;
 }
 
-.hero p.description {
-    color: var(--gray);
-    max-width: 650px;
-    margin-bottom: 28px;
-    font-size: 17px;
+.description {
+  color: var(--gray);
+  max-width: 650px;
+  font-size: 16px;
+  margin-bottom: 25px;
 }
 
 .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .button {
-    display: inline-block;
-    background: var(--orange);
-    color: white;
-    padding: 13px 25px;
-    border: 2px solid var(--orange);
-    border-radius: 12px;
-    font-weight: bold;
-    transition: 0.25s;
+  display: inline-block;
+  padding: 12px 20px;
+  border: 2px solid var(--orange);
+  border-radius: 12px;
+  background: var(--orange);
+  color: white;
+  font-weight: bold;
+  transition: .25s;
 }
 
 .button:hover {
-    background: var(--orange-dark);
-    border-color: var(--orange-dark);
-    transform: translateY(-2px);
+  background: var(--orange-dark);
+  border-color: var(--orange-dark);
+  transform: translateY(-2px);
 }
 
 .button-outline {
-    background: transparent;
-    color: var(--orange-dark);
+  background: transparent;
+  color: var(--orange-dark);
 }
 
 .button-outline:hover {
-    color: white;
+  color: white;
+}
+
+.profile-panel {
+  min-height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  border: 1px solid white;
+  border-radius: 28px;
+  background: #ffffffb8;
+}
+
+.profile-circle {
+  width: 230px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 9px solid white;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffd7b8, #fff2e8);
+  color: var(--orange-dark);
+  font-size: 70px;
+  font-weight: 800;
+  box-shadow: 0 12px 30px #b45d2220;
+}
+
+.profile-note {
+  position: absolute;
+  right: 12px;
+  bottom: 15px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: white;
+  color: var(--orange-dark);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.socials-label {
+  color: var(--gray);
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.social-link {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: white;
+  color: var(--orange-dark);
+  font-weight: bold;
+  transition: .2s;
+}
+
+.social-link:hover {
+  background: var(--orange);
+  color: white;
+  transform: translateY(-3px);
 }
 
 section {
-    padding: 75px 8%;
-    scroll-margin-top: 85px;
+  padding: 75px 7%;
+  scroll-margin-top: 90px;
 }
 
-.section-label {
-    color: var(--orange);
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-align: center;
-    margin-bottom: 5px;
+.section-head {
+  max-width: 700px;
+  margin: 0 auto 35px;
+  text-align: center;
 }
 
-section h2.section-title {
-    font-size: clamp(30px, 5vw, 42px);
-    text-align: center;
-    margin-bottom: 35px;
+.section-title {
+  margin-top: 5px;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.25;
+}
+
+.section-subtitle {
+  color: var(--gray);
+  margin-top: 10px;
 }
 
 .about-text {
-    max-width: 850px;
-    margin: auto;
-    text-align: center;
-    color: var(--gray);
-    font-size: 18px;
+  max-width: 850px;
+  margin: auto;
+  color: var(--gray);
+  text-align: center;
+  font-size: 17px;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 22px;
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .card {
-    background: var(--white);
-    border: 1px solid #f4dfcf;
-    border-radius: 22px;
-    padding: 28px;
-    box-shadow: 0 8px 25px rgba(105, 61, 28, 0.07);
-    transition: transform 0.25s, box-shadow 0.25s;
+  padding: 27px 23px;
+  border: 1px solid var(--border);
+  border-radius: 23px;
+  background: white;
+  box-shadow: 0 9px 28px #5a361b0d;
+  transition: .25s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 30px rgba(244,119,33,0.13);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 32px #f477211c;
 }
 
 .card-icon {
-    font-size: 38px;
-    margin-bottom: 12px;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border-radius: 18px;
+  background: var(--light);
+  font-size: 29px;
+}
+
+.feature-card {
+  text-align: center;
+}
+
+.feature-card .card-icon {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card h3 {
-    font-size: 21px;
-    margin-bottom: 10px;
+  margin-bottom: 9px;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 .card p {
-    color: var(--gray);
+  color: var(--gray);
+  font-size: 15px;
+  overflow-wrap: anywhere;
 }
 
-#skills, #internship {
-    background: #fffaf6;
+#highlights, #internship {
+  background: #fffaf6;
 }
 
 .skills {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 13px;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13px;
 }
 
 .skills span {
-    background: var(--light-orange);
-    color: var(--orange-dark);
-    border: 1px solid #ffd0ad;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.2s;
+  padding: 10px 20px;
+  border: 1px solid #ffd0ad;
+  border-radius: 30px;
+  background: var(--light);
+  color: var(--orange-dark);
+  font-weight: bold;
 }
 
-.skills span:hover {
-    color: white;
-    background: var(--orange);
+.project-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 900px;
 }
 
-.center {
-    text-align: center;
+.timeline {
+  max-width: 850px;
+  margin: auto;
+  display: grid;
+  gap: 18px;
 }
 
-.project-link {
-    display: inline-block;
-    color: var(--orange-dark);
-    font-weight: bold;
-    margin-top: 12px;
-}
-
-.project-link:hover {
-    text-decoration: underline;
+.timeline .card {
+  border-left: 5px solid var(--orange);
 }
 
 .contact-box {
-    max-width: 750px;
-    margin: auto;
-    text-align: center;
-    background: var(--light-orange);
-    border: 1px solid #ffdfc7;
-    border-radius: 24px;
-    padding: 35px 22px;
+  max-width: 780px;
+  margin: auto;
+  padding: 40px 25px;
+  border: 1px solid #ffdfc7;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #fff0e3, #fffaf6);
+  text-align: center;
+}
+
+.contact-box .card-icon {
+  margin: 0 auto 15px;
 }
 
 .contact-box p {
-    color: var(--gray);
-    margin: 10px 0 20px;
+  max-width: 550px;
+  margin: 12px auto 22px;
+  color: var(--gray);
 }
 
 footer {
-    background: #272321;
-    color: white;
-    padding: 28px 15px;
-    text-align: center;
+  padding: 28px 15px;
+  background: #2c2520;
+  color: white;
+  text-align: center;
 }
 
 footer span {
-    color: #ff9b57;
+  color: #ff9b57;
 }
 
-@media (max-width: 700px) {
-    header {
-        justify-content: center;
-        padding: 15px 4%;
-    }
+@media (max-width: 950px) {
+  .hero {
+    padding: 40px;
+    grid-template-columns: 1fr;
+  }
 
-    nav {
-        justify-content: center;
-    }
+  .profile-panel {
+    min-height: 250px;
+  }
 
-    nav a {
-        font-size: 13px;
-        padding: 7px 11px;
-    }
+  .profile-circle {
+    width: 190px;
+  }
 
-    .hero {
-        min-height: 75vh;
-        padding: 65px 7%;
-    }
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
-    section {
-        padding: 58px 6%;
-    }
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    padding: 14px 4%;
+  }
 
-    .card {
-        padding: 24px;
-    }
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
 
-    .buttons {
-        width: 100%;
-    }
+  nav {
+    justify-content: center;
+    gap: 6px;
+  }
 
-    .button {
-        text-align: center;
-    }
+  nav a {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .hero-wrap {
+    padding: 18px 4%;
+  }
+
+  .hero {
+    padding: 28px 21px;
+    gap: 24px;
+    border-radius: 24px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .hero h2 {
+    font-size: 19px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+  .profile-panel {
+    min-height: 220px;
+  }
+
+  .profile-circle {
+    width: 165px;
+    font-size: 55px;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .socials-label {
+    width: 100%;
+    text-align: center;
+  }
+
+  section {
+    padding: 55px 5%;
+  }
+
+  .cards, .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
 }
 </style>
 </head>
@@ -319,150 +498,202 @@ footer span {
 <body>
 
 <header>
-    <a href="#home" class="logo">ANJANA<span>.</span></a>
-
-    <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <a href="#home" class="logo">ANJANA<span>.</span></a>
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <main>
 
-<section class="hero" id="home">
-    <p class="eyebrow">HELLO, WELCOME TO MY PORTFOLIO</p>
-
-    <h1>Hi, I'm <span class="highlight">Anjana<br>Pushpakaran</span></h1>
-
+<div class="hero-wrap" id="home">
+<section class="hero">
+  <div>
+    <p class="eyebrow">Hello, welcome to my portfolio</p>
+    <h1>Hi, I'm<br><span class="highlight">Anjana Pushpakaran</span></h1>
     <h2>BCA Student &amp; Full Stack Development Intern</h2>
-
     <p class="description">
-        I am passionate about web development and creating
-        creative, responsive, and user-friendly websites.
-        I enjoy learning new technologies and turning ideas
-        into meaningful digital experiences.
+      I am passionate about web development and creating creative,
+      responsive, and user-friendly websites. I enjoy learning new
+      technologies and turning ideas into meaningful digital experiences.
     </p>
 
     <div class="buttons">
-        <a href="#about" class="button">More About Me →</a>
-        <a href="#contact" class="button button-outline">Let's Connect</a>
+      <a href="#about" class="button">More About Me →</a>
+      <a href="#contact" class="button button-outline">Let's Connect</a>
+      <!-- Add your CV file to the repository as cv.pdf to enable this link. -->
+      <a href="cv.pdf" class="button button-outline" download>Download CV ↓</a>
     </div>
+
+    <div class="socials">
+      <span class="socials-label">FIND ME ON</span>
+      <!-- Replace # with your real social profile links. -->
+      <a class="social-link" href="#" aria-label="GitHub" title="Add your GitHub URL">GH</a>
+      <a class="social-link" href="#" aria-label="LinkedIn" title="Add your LinkedIn URL">in</a>
+      <a class="social-link" href="#" aria-label="Instagram" title="Add your Instagram URL">IG</a>
+      <a class="social-link" href="mailto:YOUR_EMAIL@example.com" aria-label="Email">✉</a>
+    </div>
+  </div>
+
+  <div class="profile-panel">
+    <!-- Replace AP with your photo later if desired. -->
+    <div class="profile-circle">AP</div>
+    <div class="profile-note">BCA Student · Developer</div>
+  </div>
 </section>
+</div>
 
 <section id="about">
-    <p class="section-label">GET TO KNOW ME</p>
+  <div class="section-head">
+    <p class="section-label">Get to know me</p>
     <h2 class="section-title">About Me</h2>
+  </div>
+  <p class="about-text">
+    I'm Anjana Pushpakaran, a BCA student interested in technology
+    and web development. I enjoy learning new skills, improving my
+    programming knowledge, and creating useful digital experiences.
+    My goal is to grow as a developer by gaining practical experience
+    and building projects that solve real problems.
+  </p>
+</section>
 
-    <p class="about-text">
-        I'm Anjana Pushpakaran, a BCA student interested in
-        technology and web development. I enjoy learning new
-        skills, improving my programming knowledge, and creating
-        useful digital experiences. My goal is to grow as a
-        developer by gaining practical experience and building
-        projects that solve real problems.
-    </p>
+<section id="highlights">
+  <div class="section-head">
+    <p class="section-label">A little about my journey</p>
+    <h2 class="section-title">Who I Am</h2>
+    <p class="section-subtitle">Curious, creative, and always ready to learn.</p>
+  </div>
+
+  <div class="cards">
+    <article class="card feature-card">
+      <div class="card-icon">🎓</div>
+      <h3>Student</h3>
+      <p>Pursuing BCA with an interest in software development, programming, and technology.</p>
+    </article>
+
+    <article class="card feature-card">
+      <div class="card-icon">💻</div>
+      <h3>Developer</h3>
+      <p>Learning to build responsive and user-friendly websites with modern designs.</p>
+    </article>
+
+    <article class="card feature-card">
+      <div class="card-icon">💡</div>
+      <h3>Self Learner</h3>
+      <p>Exploring new technologies and improving my skills through practice and projects.</p>
+    </article>
+
+    <article class="card feature-card">
+      <div class="card-icon">🎯</div>
+      <h3>Goal Oriented</h3>
+      <p>Focused on learning, personal growth, and creating meaningful digital experiences.</p>
+    </article>
+  </div>
 </section>
 
 <section id="skills">
-    <p class="section-label">WHAT I WORK WITH</p>
+  <div class="section-head">
+    <p class="section-label">What I work with</p>
     <h2 class="section-title">My Skills</h2>
+    <p class="section-subtitle">Technologies and skills I am learning and using.</p>
+  </div>
 
-    <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Web Development</span>
-        <span>Responsive Design</span>
-        <span>Problem Solving</span>
-    </div>
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Web Development</span>
+    <span>Responsive Design</span>
+    <span>Problem Solving</span>
+  </div>
 </section>
 
 <section id="projects">
-    <p class="section-label">WHAT I'VE BUILT</p>
+  <div class="section-head">
+    <p class="section-label">What I've built</p>
     <h2 class="section-title">My Projects</h2>
+  </div>
 
-    <div class="cards">
-        <article class="card">
-            <div class="card-icon">🛍️</div>
-            <h3>Online Clothing Store</h3>
-            <p>
-                A mini project focused on displaying clothing
-                products and designing a user-friendly online
-                shopping interface.
-            </p>
-        </article>
+  <div class="cards project-grid">
+    <article class="card">
+      <div class="card-icon">🛍️</div>
+      <h3>Online Clothing Store</h3>
+      <p>
+        A mini project focused on displaying clothing products and
+        designing a user-friendly online shopping interface.
+      </p>
+    </article>
 
-        <article class="card">
-            <div class="card-icon">💻</div>
-            <h3>Personal Portfolio</h3>
-            <p>
-                A personal website showcasing my background,
-                technical skills, education, and projects using
-                HTML and CSS.
-            </p>
-        </article>
-    </div>
+    <article class="card">
+      <div class="card-icon">💻</div>
+      <h3>Personal Portfolio</h3>
+      <p>
+        A personal website showcasing my background, technical skills,
+        education, and projects using HTML and CSS.
+      </p>
+    </article>
+  </div>
 </section>
 
 <section id="education">
-    <p class="section-label">MY LEARNING JOURNEY</p>
+  <div class="section-head">
+    <p class="section-label">My learning journey</p>
     <h2 class="section-title">Education</h2>
+  </div>
 
-    <div class="cards">
-        <article class="card">
-            <div class="card-icon">🎓</div>
-            <h3>Bachelor of Computer Applications (BCA)</h3>
-            <p>College: Add your college name</p>
-            <p>University: Add your university name</p>
-            <p>Year: Add your study period</p>
-        </article>
-    </div>
+  <div class="timeline">
+    <article class="card">
+      <div class="card-icon">🎓</div>
+      <h3>Bachelor of Computer Applications (BCA)</h3>
+      <p>College: Add your college name</p>
+      <p>University: Add your university name</p>
+      <p>Year: Add your study period</p>
+    </article>
+  </div>
 </section>
 
 <section id="internship">
-    <p class="section-label">PRACTICAL EXPERIENCE</p>
+  <div class="section-head">
+    <p class="section-label">Practical experience</p>
     <h2 class="section-title">Internship</h2>
+  </div>
 
-    <div class="cards">
-        <article class="card">
-            <div class="card-icon">🚀</div>
-            <h3>Full Stack Development Intern</h3>
-            <p><strong>Company:</strong> Cellar Innovative Developers</p>
-            <p>
-                Learning about web development and gaining
-                practical experience in software development.
-            </p>
-        </article>
-    </div>
+  <div class="timeline">
+    <article class="card">
+      <div class="card-icon">🚀</div>
+      <h3>Full Stack Development Intern</h3>
+      <p><strong>Company:</strong> Cellar Innovative Developers</p>
+      <p>Learning about web development and gaining practical experience in software development.</p>
+    </article>
+  </div>
 </section>
 
 <section id="contact">
-    <p class="section-label">LET'S TALK</p>
+  <div class="section-head">
+    <p class="section-label">Let's talk</p>
     <h2 class="section-title">Contact Me</h2>
+  </div>
 
-    <div class="contact-box">
-        <div class="card-icon">✉️</div>
-        <h3>Have a project or opportunity?</h3>
-        <p>
-            Thank you for visiting my portfolio.
-            Feel free to connect with me.
-        </p>
-        <p>Replace the placeholder below with your professional email.</p>
-        <a class="button"
-           href="mailto:YOUR_EMAIL@example.com">
-            Email Me →
-        </a>
-    </div>
+  <div class="contact-box">
+    <div class="card-icon">✉️</div>
+    <h3>Have a project or opportunity?</h3>
+    <p>
+      Thank you for visiting my portfolio. Feel free to connect
+      with me about projects, learning opportunities, or collaboration.
+    </p>
+    <a class="button" href="mailto:YOUR_EMAIL@example.com">Email Me →</a>
+  </div>
 </section>
 
 </main>
 
 <footer>
-    <p>Designed with <span>♥</span> by Anjana Pushpakaran | © 2026</p>
+  <p>Designed with <span>♥</span> by Anjana Pushpakaran | © 2026</p>
 </footer>
 
 </body>
